@@ -31502,7 +31502,7 @@ const notify = async (name, url, status) => {
   let commiterName = ''
   let commiterEmail = ''
   let message = ''
-  let environment = 'undefined'
+  let environment = ref || 'undefined'
 
   if (github.context.eventName === 'push') {
     const pushPayload = github.context.payload || {}
