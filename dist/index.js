@@ -31520,6 +31520,9 @@ const notify = async (name, url, status) => {
   if (environment.toLowerCase().includes('production') || environment.toLowerCase().includes('master') || environment.toLowerCase().includes('main')) {
     environment = 'Production'
   }
+  if (environment.toLowerCase().includes('non-production') || environment.toLowerCase().includes('nonproduction')) {
+    environment = 'Non Production'
+  }
 
   const body = {
     cards: [
