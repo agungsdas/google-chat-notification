@@ -31511,13 +31511,13 @@ const notify = async (name, url, status) => {
     message = pushPayload.commits?.[0]?.message
   }
 
-  if (ref.toLowerCase().includes('dev')) {
+  if (environment.toLowerCase().includes('dev')) {
     environment = 'Dev'
   }
-  if (ref.toLowerCase().includes('staging') || ref.toLowerCase().includes('release') || ref.toLowerCase().includes('hotfix')) {
+  if (environment.toLowerCase().includes('staging') || environment.toLowerCase().includes('release') || environment.toLowerCase().includes('hotfix')) {
     environment = 'Staging'
   }
-  if (ref.toLowerCase().includes('production') || ref.toLowerCase().includes('master') || ref.toLowerCase().includes('main')) {
+  if (environment.toLowerCase().includes('production') || environment.toLowerCase().includes('master') || environment.toLowerCase().includes('main')) {
     environment = 'Production'
   }
 
